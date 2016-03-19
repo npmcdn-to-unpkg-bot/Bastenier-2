@@ -44,16 +44,13 @@
         .cta {
             display: flex;
 
-            color: $beige--kidnapper;
-            background: $blue--oxford;
+            min-height: 4rem;
 
             align-items: center;
 
-            @media screen and (min-width: $breakpoint--mobile) {
-                min-height: 4rem;
-
-                color: $blue--oxford;
-                background: $beige--kidnapper;
+            @media screen and (max-width: $breakpoint--mobile) {
+                color: $beige--kidnapper;
+                background: $blue--oxford;
             }
         }
     }
