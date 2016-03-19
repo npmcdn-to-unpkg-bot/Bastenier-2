@@ -13,5 +13,5 @@
       <?php echo $promotedPage->post_title?>
     </h3>
   </div>
-  <?php echo '<a href="'.$url.'" class="cta">'.$cta.'</a>' ?>
+  <?php echo '<a href="'.$url.'" class="cta"><span>'.$cta.'</span></a>' ?>
 </div>

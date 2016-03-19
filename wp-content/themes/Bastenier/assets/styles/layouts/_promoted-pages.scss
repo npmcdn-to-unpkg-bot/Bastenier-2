@@ -14,11 +14,23 @@
 
         @media screen and (min-width: $breakpoint--mobile) {
             @include span(6);
+
+            &:nth-child(2n + 1) {
+                clear: left;
+            }
         }
         @media screen and (min-width: $breakpoint--tablet) {
             margin-top: 0;
 
             @include span(3);
+
+            &:nth-child(2n + 1) {
+                clear: none;
+            }
+
+            &:nth-child(4n + 1) {
+                clear: none;
+            }
         }
 
         &__title {
@@ -30,9 +42,18 @@
         }
 
         .cta {
-            @media screen and (max-width: $breakpoint--mobile) {
-                color: $beige--kidnapper;
-                background: $blue--oxford;
+            display: flex;
+
+            color: $beige--kidnapper;
+            background: $blue--oxford;
+
+            align-items: center;
+
+            @media screen and (min-width: $breakpoint--mobile) {
+                min-height: 4rem;
+
+                color: $blue--oxford;
+                background: $beige--kidnapper;
             }
         }
     }
