@@ -1,6 +1,6 @@
 
 
-.main {
+main.main {
     @include container();
 
     @media screen and (min-width: $breakpoint--tablet) {
