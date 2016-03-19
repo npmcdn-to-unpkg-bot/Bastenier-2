@@ -1,0 +1,98 @@
+.banner {
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: $blue--oxford;
+
+    $cornerWidth--mobile: 15vw;
+    $cornerWidth--desk: 140px;
+
+    &__image {
+        position: relative;
+
+        width: 100%;
+        padding-top: 41%;
+
+        .corner {
+            position: absolute;
+            z-index: 1;
+
+            width: 0;
+            height: 0;
+
+            border-style: solid;
+
+            &--top {
+                top: -1px;
+                left: -1px;
+
+                transform: translateX(-$cornerWidth--mobile);
+
+                border-width: $cornerWidth--mobile $cornerWidth--mobile 0 0;
+                border-color: $white transparent transparent transparent;
+
+                @media screen and (min-width: $breakpoint--tablet) {
+                    transform: translateX(-$cornerWidth--desk);
+
+                    border-width: $cornerWidth--desk $cornerWidth--desk 0 0;
+                }
+            }
+
+            &--bottom {
+                right: -1px;
+                bottom: -1px;
+
+                transform: translateX($cornerWidth--mobile);
+
+                border-width: 0 0 $cornerWidth--mobile $cornerWidth--mobile;
+                border-color: transparent transparent $white transparent;
+
+                @media screen and (min-width: $breakpoint--tablet) {
+                    transform: translateX($cornerWidth--desk);
+
+                    border-width: 0 0 $cornerWidth--desk $cornerWidth--desk;
+                }
+            }
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: auto;
+
+            opacity: .5;
+        }
+    }
+
+    &__baseline {
+        font-family: $factoria;
+
+        position: relative;
+        z-index: 1;
+
+        padding-top: 10px;
+        padding-right: $cornerWidth--mobile;
+
+        background-color: $white;
+
+        @include font-size(17, 21);
+
+
+        @media screen and (min-width: $breakpoint--tablet-portrait) {
+            position: absolute;
+            top: 50%;
+            right: 5%;
+
+            margin-top: -11px;
+            padding-top: 0;
+            padding-right: 0;
+
+            color: $white;
+            background-color: transparent;
+        }
+    }
+}

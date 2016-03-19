@@ -1,0 +1,34 @@
+
+
+main.main {
+    @include container();
+
+    @media screen and (min-width: $breakpoint--tablet) {
+        @include container($breakpoint--tablet);
+    }
+}
+
+img {
+    display: block;
+
+    max-width: 100%;
+    margin: auto;
+}
+
+.mob {
+    &--hidden {
+        display: none;
+
+        @media screen and (min-width: $breakpoint--tablet-portrait) {
+            display: block;
+        }
+    }
+
+    &--only {
+        display: block;
+
+        @media screen and (min-width: $breakpoint--tablet-portrait) {
+            display: none;
+        }
+    }
+}

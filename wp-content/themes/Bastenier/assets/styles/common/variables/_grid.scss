@@ -1,0 +1,12 @@
+// Grid settings
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
+$breakpoint--mobile: 500px;
+$breakpoint--tablet-portrait: 768px;
+$breakpoint--tablet: 923px;

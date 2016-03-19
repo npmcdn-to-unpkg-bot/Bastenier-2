@@ -1,0 +1,39 @@
+.promoted-pages {
+    @include container();
+
+    @media screen and (min-width: $breakpoint--mobile) {
+        padding-top: 60px;
+    }
+
+    .promoted-page {
+        margin-top: 20px;
+
+        text-align: center;
+
+        @include span(12);
+
+        @media screen and (min-width: $breakpoint--mobile) {
+            @include span(6);
+        }
+        @media screen and (min-width: $breakpoint--tablet) {
+            margin-top: 0;
+
+            @include span(3);
+        }
+
+        &__title {
+            h3 {
+                @media screen and (min-width: $breakpoint--mobile) {
+                    margin-bottom: 3em;
+                }
+            }
+        }
+
+        .cta {
+            @media screen and (max-width: $breakpoint--mobile) {
+                color: $beige--kidnapper;
+                background: $blue--oxford;
+            }
+        }
+    }
+}
