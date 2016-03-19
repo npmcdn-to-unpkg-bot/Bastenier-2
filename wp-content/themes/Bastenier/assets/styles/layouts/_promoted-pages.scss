@@ -1,57 +1,57 @@
 .promoted-pages {
-    @include container();
+  @include container();
+
+  @media screen and (min-width: $breakpoint--mobile) {
+    padding-top: 60px;
+  }
+
+  .promoted-page {
+    margin-top: 20px;
+
+    text-align: center;
+
+    @include span(12);
 
     @media screen and (min-width: $breakpoint--mobile) {
-        padding-top: 60px;
+      @include span(6);
+
+      &:nth-child(2n + 1) {
+        clear: left;
+      }
+    }
+    @media screen and (min-width: $breakpoint--tablet) {
+      margin-top: 0;
+
+      @include span(3);
+
+      &:nth-child(2n + 1) {
+        clear: none;
+      }
+
+      &:nth-child(4n + 1) {
+        clear: none;
+      }
     }
 
-    .promoted-page {
-        margin-top: 20px;
-
-        text-align: center;
-
-        @include span(12);
-
+    &__title {
+      h3 {
         @media screen and (min-width: $breakpoint--mobile) {
-            @include span(6);
-
-            &:nth-child(2n + 1) {
-                clear: left;
-            }
+          margin-bottom: 3em;
         }
-        @media screen and (min-width: $breakpoint--tablet) {
-            margin-top: 0;
-
-            @include span(3);
-
-            &:nth-child(2n + 1) {
-                clear: none;
-            }
-
-            &:nth-child(4n + 1) {
-                clear: none;
-            }
-        }
-
-        &__title {
-            h3 {
-                @media screen and (min-width: $breakpoint--mobile) {
-                    margin-bottom: 3em;
-                }
-            }
-        }
-
-        .cta {
-            display: flex;
-
-            min-height: 4rem;
-
-            align-items: center;
-
-            @media screen and (max-width: $breakpoint--mobile) {
-                color: $beige--kidnapper;
-                background: $blue--oxford;
-            }
-        }
+      }
     }
+
+    .cta {
+      display: flex;
+
+      min-height: 4rem;
+
+      align-items: center;
+
+      @media screen and (max-width: $breakpoint--mobile) {
+        color: $beige--kidnapper;
+        background: $blue--oxford;
+      }
+    }
+  }
 }

@@ -1,55 +1,55 @@
 html {
-    font-size: 62.5%; /* Sets up the Base 10 stuff */
+  font-size: 62.5%; /* Sets up the Base 10 stuff */
 
-    color: $blue--oxford;
+  color: $blue--oxford;
 }
 
 body {
-    font-family: $factoria;
+  font-family: $factoria;
 
-    @include font-size(15);
+  @include font-size(15);
 }
 
 h1,
 h2 {
-    font-family: $factoria;
+  font-family: $factoria;
 
-    margin-top: 30px;
-    padding-bottom: 10px;
+  margin-top: 30px;
+  padding-bottom: 10px;
 
-    border-bottom: 1px solid;
+  border-bottom: 1px solid;
 
-    @include font-size(20, 25);
+  @include font-size(20, 25);
 
-    @media screen and (min-width: $breakpoint--tablet-portrait) {
-        padding-bottom: 30px;
+  @media screen and (min-width: $breakpoint--tablet-portrait) {
+    padding-bottom: 30px;
 
-        @include font-size(20);
-    }
+    @include font-size(20);
+  }
 
-    &.lighter {
-        font-weight: lighter;
-    }
+  &.lighter {
+    font-weight: lighter;
+  }
 }
 
 h3 {
-    @include font-size(20);
+  @include font-size(20);
 }
 
 .home {
-    h1 {
-        font-size: 0;
-        line-height: 0;
+  h1 {
+    font-size: 0;
+    line-height: 0;
 
-        margin: 0;
-        padding: 0;
+    margin: 0;
+    padding: 0;
 
-        opacity: 0;
-    }
+    opacity: 0;
+  }
 }
 
 p {
-    font-family: $opensans;
+  font-family: $opensans;
 
-    @include font-size(15);
+  @include font-size(15);
 }
