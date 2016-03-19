@@ -1,0 +1,13 @@
+
+
+.post {
+  @include container();
+
+  &__image {
+    @include span(9);
+  }
+
+  &__body {
+    @include span(3);
+  }
+}
