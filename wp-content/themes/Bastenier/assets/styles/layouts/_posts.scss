@@ -1,13 +1,74 @@
-
+.post-overview {
+  margin-top: 30px;
+}
 
 .post {
   @include container();
 
   &__image {
+    overflow: hidden;
+
     @include span(9);
   }
 
   &__body {
     @include span(3);
+  }
+
+  .image--featured {
+    padding-top: 67%;
+  }
+
+  .updated {
+    @include font-size(20, 20);
+
+    &__day {
+      font-weight: bold;
+
+      display: block;
+
+      @include font-size(40, 40);
+    }
+  }
+
+  .entry-title {
+    padding-bottom: 0;
+
+    border-bottom: none;
+
+    a {
+      text-decoration: none;
+
+      color: $blue--oxford;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__category {
+    position: relative;
+
+    margin-top: 25px;
+
+    figure {
+      display: inline-block;
+
+      width: 135px;
+      margin: 0;
+    }
+  }
+
+  &__category-label {
+    position: absolute;
+    bottom: 64px;
+    left: 112px;
+
+    text-transform: uppercase;
+
+    color: $gimblet;
+
+    @include font-size(20, 20);
   }
 }

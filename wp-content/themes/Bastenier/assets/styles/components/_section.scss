@@ -1,0 +1,7 @@
+.section {
+  @include container();
+
+  &__title {
+    @include span(12);
+  }
+}

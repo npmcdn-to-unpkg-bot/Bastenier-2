@@ -6,12 +6,14 @@
 ?>
 
 <div class="banner">
-  <div class="banner__image">
-    <span class="corner corner--top"></span>
-    <?php the_post_thumbnail('large'); ?>
-    <span class="corner corner--bottom"></span>
-  </div>
-  <div class="banner__baseline">
-    <?php echo get_post_meta($post->ID, 'baseline', true); ?>
+  <div class="banner__container">
+    <div class="image image--featured">
+      <span class="corner corner--top"></span>
+      <?php the_post_thumbnail('large'); ?>
+      <span class="corner corner--bottom"></span>
+    </div>
+    <div class="banner__baseline">
+      <?php echo get_post_meta($post->ID, 'baseline', true); ?>
+    </div>
   </div>
 </div>
