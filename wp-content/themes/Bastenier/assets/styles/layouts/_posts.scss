@@ -8,11 +8,37 @@
   &__image {
     overflow: hidden;
 
-    @include span(9);
+    @include span(12);
+
+    @media screen and (min-width: $breakpoint--tablet-portrait) {
+      @include span(6);
+    }
+
+    @media screen and (min-width: $breakpoint--tablet) {
+      @include span(9);
+    }
   }
 
   &__body {
-    @include span(3);
+    @include span(12);
+
+    @media screen and (min-width: $breakpoint--tablet-portrait) {
+      @include span(6);
+    }
+
+    @media screen and (min-width: $breakpoint--tablet) {
+      @include span(3);
+    }
+  }
+
+  &__meta {
+    position: relative;
+
+    margin-top: -50px;
+
+    @media screen and (min-width: $breakpoint--tablet-portrait) {
+      margin-top: 0;
+    }
   }
 
   .image--featured {
@@ -20,14 +46,24 @@
   }
 
   .updated {
-    @include font-size(20, 20);
+    padding: 5px;
 
-    &__day {
-      font-weight: bold;
+    background: #fff;
 
-      display: block;
+    @media screen and (min-width: $breakpoint--tablet-portrait) {
+      margin-top: 0;
 
-      @include font-size(40, 40);
+      @include font-size(20, 20);
+    }
+
+    @media screen and (min-width: $breakpoint--tablet) {
+      &__day {
+        font-weight: bold;
+
+        display: block;
+
+        @include font-size(40, 40);
+      }
     }
   }
 
@@ -48,15 +84,21 @@
   }
 
   &__category {
-    position: relative;
+    display: none;
 
-    margin-top: 25px;
+    @media screen and (min-width: $breakpoint--tablet) {
+      position: relative;
 
-    figure {
-      display: inline-block;
+      display: block;
 
-      width: 135px;
-      margin: 0;
+      margin-top: 25px;
+
+      figure {
+        display: inline-block;
+
+        width: 135px;
+        margin: 0;
+      }
     }
   }
 

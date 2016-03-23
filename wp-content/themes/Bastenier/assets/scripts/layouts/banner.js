@@ -40,7 +40,7 @@ var banner = {
 
   baselineAnimation: function(instance){
 
-    var baseline = $(instance.find('.banner__baseline'));
+    var baseline = $(instance.siblings('.banner__baseline'));
 
     TweenMax.to(baseline, 1.1 ,{x: -30, ease: Power4.easeInOut});
   },
