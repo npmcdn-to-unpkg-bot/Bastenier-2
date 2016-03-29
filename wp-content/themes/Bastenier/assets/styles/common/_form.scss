@@ -1,8 +1,19 @@
 form {
+  label {
+    margin-bottom: 20px;
+  }
   input {
-    padding: 22px;
+    padding: 11px;
 
     color: $blue--oxford;
+    border: none;
     border-radius: 0;
+
+    @include font-size(15);
+
+    &[type='submit'] {
+      color: white;
+      background: $gimblet;
+    }
   }
 }

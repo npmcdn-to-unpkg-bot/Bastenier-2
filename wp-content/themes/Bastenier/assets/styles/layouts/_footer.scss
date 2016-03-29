@@ -1,8 +1,12 @@
 .footer {
-  padding: 60px 0 50px;
+  padding: 60px 10% 50px;
 
   color: white;
   background-color: $blue--oxford;
+
+  @media screen and (min-width: $breakpoint--tablet) {
+    padding: 60px 0 50px;
+  }
 
   a {
     text-decoration: none;
@@ -25,13 +29,54 @@
   &__contact,
   &__logo,
   &__newsletter {
-    padding-right: 10%;
-    padding-left: 10%;
+    margin-bottom: 20px;
 
     @include span(12);
 
+    @media screen and (min-width: $breakpoint--tablet-portrait) {
+      @include span(6);
+    }
+
     @media screen and (min-width: $breakpoint--tablet) {
       @include span(4);
+    }
+
+    label {
+      text-align: right;
+
+      @include span(12);
+    }
+
+    input {
+      @include span(12);
+
+      @media screen and (min-width: $breakpoint--tablet) {
+        @include span(8);
+
+        &[type='submit'] {
+          @include span(4);
+        }
+      }
+    }
+  }
+
+  &__logo {
+    @media screen and (min-width: $breakpoint--tablet-portrait) {
+      @include span(12);
+    }
+    @media screen and (min-width: $breakpoint--tablet) {
+      @include span(4);
+      @include push(4);
+    }
+  }
+
+  &__contact {
+    p {
+      font-family: $factoria;
+    }
+
+    @media screen and (min-width: $breakpoint--tablet) {
+      @include pull(8)
     }
   }
 
