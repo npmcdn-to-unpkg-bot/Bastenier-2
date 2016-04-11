@@ -7,7 +7,8 @@
 <div class="post__category">
   <figure>
     <?php
-      $icon = get_post_meta( $postOverview->ID,'icon', true);
+      $page_for_posts_id = get_option( 'page_for_posts' );
+      $icon = get_post_meta( $page_for_posts_id,'icon', true);
       echo '<img src="'. $icon['guid'].'" alt="news" />'
     ?>
   </figure>

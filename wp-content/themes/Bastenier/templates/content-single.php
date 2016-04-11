@@ -2,7 +2,11 @@
   <article <?php post_class(); ?>>
     <header>
       <h1 class="entry-title"><?php the_title(); ?></h1>
-      <?php get_template_part('templates/entry-meta'); ?>
+      <?php
+        if(is_singular( 'post' )){
+          get_template_part('templates/entry-meta');
+        }
+      ?>
     </header>
     <div class="entry-content">
       <?php the_content(); ?>

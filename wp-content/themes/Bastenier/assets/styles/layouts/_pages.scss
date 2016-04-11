@@ -1,0 +1,9 @@
+.single-overviewpage {
+  .overviewpage {
+    @include span(12);
+
+    .entry-content {
+      border-bottom: 1px solid;
+    }
+  }
+}
