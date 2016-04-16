@@ -9,10 +9,10 @@
 ?>
 
 <li>
-  <a href="<?php echo str_replace(' ', '_', $taxonomy->name) ?>">
-    <?php echo $image; ?>
-    <span>
+    <div class="taxonomy-overview__navigation-image">
+      <?php echo $image; ?>
+    </div>
+    <h3>
       <?php echo $taxonomy->name; ?>
-    </span>
-  </a>
+    </h3>
 </li>

@@ -104,12 +104,14 @@ function assets() {
   //vendor
   wp_enqueue_script( 'gsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js', array(), false, true );
   wp_enqueue_script( 'imagesloaded-js', 'https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js', array(), false, true );
+  wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/node_modules/slick-carousel/slick/slick.min.js', array(), false, true );
 
 
   //custom
   wp_enqueue_script('sage/banner', Assets\asset_path('scripts/banner.js'), ['jquery','gsap-js','imagesloaded-js'], null, true);
+  wp_enqueue_script('sage/carousel', Assets\asset_path('scripts/carousel.js'), ['jquery','slick-js'], null, true);
 
   //main
-  wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery', 'sage/banner'], null, true);
+  wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery', 'sage/banner', 'sage/carousel'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);

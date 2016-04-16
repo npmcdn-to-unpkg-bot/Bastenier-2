@@ -17,6 +17,11 @@
         "scripts/layouts/banner.js"
       ]
     },
+    "carousel.js": {
+      "files": [
+        "scripts/layouts/carousel.js"
+      ]
+    },
     "customizer.js": {
       "files": [
         "scripts/customizer.js"

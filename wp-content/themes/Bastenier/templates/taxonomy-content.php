@@ -6,23 +6,23 @@
   if ( $pod->exists() ) {
       $icon = $pod->get_field('visual')[0];
       $image = '<img src="'.$icon['guid'].'"/>';
-      $quote = '<h4>'. $pod->get_field('quote') .'</h4>';
+      $quote = $pod->get_field('quote');
   }
 ?>
 
 <li id="<?php str_replace(' ', '_', $taxonomy->name)?>" class="taxonomy-item">
   <div class="mobile">
     <?php echo $image; ?>
-    <span>
-      <?php $taxonomy->name; ?>
-    </span>
+    <h3>
+      <?php echo $taxonomy->name; ?>
+    </h3>
   </div>
   <div class="taxonomy-item__body">
-    <h4>
+    <h4 class="taxonomy-item__quote">
       <?php echo $quote; ?>
     </h4>
     <p>
-      <?php $taxonomy->description; ?>
+      <?php echo $taxonomy->description; ?>
     </p>
   </div>
 </li>
