@@ -3,6 +3,8 @@
 }
 
 .post {
+  position: relative;
+
   @include container();
 
   & + .post {
@@ -18,16 +20,22 @@
   }
 
   &__image {
+    position: absolute;
+
     overflow: hidden;
 
-    @include span(12);
+    .post-overview--expanded & {
+      position: relative;
 
-    @media screen and (min-width: $breakpoint--tablet-portrait) {
-      @include span(6);
-    }
+      @include span(12);
 
-    @media screen and (min-width: $breakpoint--tablet) {
-      @include span(9);
+      @media screen and (min-width: $breakpoint--tablet-portrait) {
+        @include span(6);
+      }
+
+      @media screen and (min-width: $breakpoint--tablet) {
+        @include span(9);
+      }
     }
   }
 
@@ -36,28 +44,64 @@
 
     @include span(12);
 
-    @media screen and (min-width: $breakpoint--tablet-portrait) {
-      @include span(6);
-    }
+    .post-overview--expanded & {
+      @media screen and (min-width: $breakpoint--tablet-portrait) {
+        @include span(6);
+      }
 
-    @media screen and (min-width: $breakpoint--tablet) {
-      @include span(3);
-    }
+      @media screen and (min-width: $breakpoint--tablet) {
+        @include span(3);
+      }
 
-    &__container {
-      position: absolute;
-      top: 0;
-      left: 0;
+      &__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
     }
   }
 
   &__meta {
     position: relative;
 
-    margin-top: -50px;
+    padding-bottom: 30px;
 
-    @media screen and (min-width: $breakpoint--tablet-portrait) {
-      margin-top: 0;
+    border-bottom: 1px solid $beige--kidnapper;
+
+    @include container();
+
+    .updated {
+      @include span(6);
+    }
+
+    .post__category {
+      float: right;
+
+      padding-top: 20px;
+
+      text-align: right;
+    }
+
+
+
+    .post-overview--expanded & {
+      margin-top: -50px;
+
+      border-bottom: none;
+
+      .updated {
+        @include span(12);
+      }
+
+      .post__category {
+        text-align: left;
+
+        @include span(12);
+      }
+
+      @media screen and (min-width: $breakpoint--tablet-portrait) {
+        margin-top: 0;
+      }
     }
   }
 
@@ -107,30 +151,41 @@
     display: none;
 
     @media screen and (min-width: $breakpoint--tablet) {
-      position: relative;
-
       display: block;
+    }
 
-      margin-top: 25px;
-
-      figure {
-        display: inline-block;
-
-        width: 135px;
-        margin: 0;
+    .post-overview--expanded & {
+      @media screen and (min-width: $breakpoint--tablet) {
+        margin-top: 25px;
       }
     }
   }
 
   &__category-label {
-    position: absolute;
-    bottom: 64px;
-    left: 112px;
+    position: relative;
+
+    display: block;
+
+    padding-left: 50px;
 
     text-transform: uppercase;
 
     color: $gimblet;
 
     @include font-size(20, 20);
+
+    &:before {
+      position: absolute;
+      bottom: -25px;
+      left: 0;
+
+      width: 56px;
+      height: 57px;
+
+      content: '';
+
+      background-image: url(../images/paper.svg);
+      background-size: cover;
+    }
   }
 }

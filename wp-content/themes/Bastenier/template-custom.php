@@ -36,7 +36,7 @@
     $recent_posts = get_posts( $args);
   ?>
 
-  <div class="post-overview">
+  <div class="post-overview post-overview--expanded">
       <?php
         foreach ( $recent_posts as $post ){
           setup_postdata( $post );
