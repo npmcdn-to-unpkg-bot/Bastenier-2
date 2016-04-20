@@ -2,9 +2,13 @@
 
 header .container,
 main.main {
+  padding: 0 5%;
+
   @include container();
 
   @media screen and (min-width: $breakpoint--tablet) {
+    padding: 0;
+
     @include container($breakpoint--tablet);
   }
 }

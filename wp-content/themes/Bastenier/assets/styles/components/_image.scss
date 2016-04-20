@@ -29,6 +29,12 @@
           transform: translateX(-$cornerWidth--desk);
 
           border-width: $cornerWidth--desk $cornerWidth--desk 0 0;
+
+          .post-overview:not(.post-overview--expanded) & {
+            transform: translateX(-$cornerWidth--desk-small);
+
+            border-width: $cornerWidth--desk-small $cornerWidth--desk-small 0 0;
+          }
         }
       }
 
@@ -45,6 +51,12 @@
           transform: translateX($cornerWidth--desk);
 
           border-width: 0 0 $cornerWidth--desk $cornerWidth--desk;
+
+          .post-overview:not(.post-overview--expanded) & {
+            transform: translateX($cornerWidth--desk-small);
+
+            border-width: 0 0 $cornerWidth--desk-small $cornerWidth--desk-small;
+          }
         }
       }
     }

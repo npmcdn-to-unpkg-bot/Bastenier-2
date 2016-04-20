@@ -5,27 +5,46 @@
 .post {
   position: relative;
 
+  padding: 5px 0;
+
   @include container();
 
+  @media screen and (min-width: $breakpoint--tablet-portrait) {
+    padding: 30px 0;
+  }
+
   & + .post {
-    margin-top: 50px;
+    border-top: 1px solid;
   }
 
   &__container {
-    @include span(12);
+    @include span(12 no-gutters);
   }
 
   &__container {
+    position: relative;
+
     overflow: hidden;
   }
 
   &__image {
-    position: absolute;
-
+    display: none;
     overflow: hidden;
+
+    @media screen and (min-width: $breakpoint--tablet) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      display: block;
+
+      width: span(4);
+    }
 
     .post-overview--expanded & {
       position: relative;
+      right: auto;
+      bottom: auto;
 
       @include span(12);
 
@@ -42,9 +61,14 @@
   &__body {
     position: relative;
 
-    @include span(12);
+    @include span(12 no-gutters);
+
+    @media screen and (min-width: $breakpoint--tablet) {
+      min-height: 330px;
+    }
 
     .post-overview--expanded & {
+      min-height: none;
       @media screen and (min-width: $breakpoint--tablet-portrait) {
         @include span(6);
       }
@@ -64,11 +88,13 @@
   &__meta {
     position: relative;
 
-    padding-bottom: 30px;
-
     border-bottom: 1px solid $beige--kidnapper;
 
     @include container();
+
+    @media screen and (min-width: $breakpoint--tablet-portrait) {
+      padding-bottom: 30px;
+    }
 
     .updated {
       @include span(6);
@@ -144,6 +170,17 @@
       &:hover {
         text-decoration: underline;
       }
+    }
+  }
+
+  .entry-summary,
+  .entry-title {
+    @media screen and (min-width: $breakpoint--tablet) {
+      @include span(8);
+    }
+
+    .post-overview--expanded & {
+      @include span(12 no-gutters);
     }
   }
 
