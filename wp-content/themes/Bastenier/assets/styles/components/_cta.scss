@@ -42,6 +42,13 @@
     }
   }
 
+  &--no-icon {
+    padding: 13px 16px;
+    &:after {
+      content: '';
+    }
+  }
+
   &--inverse {
     color: $beige--kidnapper;
     background: $blue--oxford;
