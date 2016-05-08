@@ -30,6 +30,7 @@
     );
   }
 
+  set_query_var( 'currentFilter', $postCategory);
   get_template_part('templates/post-filters');
 
   $custom_query = new WP_Query($args);

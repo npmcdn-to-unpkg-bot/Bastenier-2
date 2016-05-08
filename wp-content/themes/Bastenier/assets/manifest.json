@@ -22,6 +22,11 @@
         "scripts/layouts/carousel.js"
       ]
     },
+    "filters.js": {
+      "files": [
+        "scripts/layouts/filters.js"
+      ]
+    },
     "customizer.js": {
       "files": [
         "scripts/customizer.js"

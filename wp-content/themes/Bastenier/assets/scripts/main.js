@@ -21,6 +21,7 @@
         // JavaScript to be fired on all pages
         banner.init();
         carousel.init();
+        filters.init();
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

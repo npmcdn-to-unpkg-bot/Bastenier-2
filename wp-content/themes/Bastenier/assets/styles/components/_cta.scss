@@ -34,7 +34,8 @@
     transform-origin: 50% 50%;
   }
 
-  &:hover {
+  &:hover,
+  &.active {
     @extend .cta--inverse;
 
     &:after {
