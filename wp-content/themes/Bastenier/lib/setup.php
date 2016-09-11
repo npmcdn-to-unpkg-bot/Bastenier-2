@@ -103,7 +103,7 @@ function assets() {
 
   //vendor
   wp_enqueue_script( 'gsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js', array(), false, true );
-  wp_enqueue_script( 'imagesloaded-js', 'https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js', array(), false, true );
+  wp_enqueue_script( 'imagesloaded-js', 'https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js', array(), false, true );
 
 
   //custom
